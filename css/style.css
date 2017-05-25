@@ -1,0 +1,45 @@
+@media (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+}
+body {
+  background-image: url(https://s28.postimg.org/f2ajcib2l/WDF_653975.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 15%;
+}
+body .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .container {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+body .container #city {
+  margin-bottom: 30px;
+}
+body .container h3,
+body .container h4 {
+  font-weight: bold;
+}
+body .container .info {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  padding-top: 15px;
+}
+body .container .info .c,
+body .container .info .f {
+  cursor: pointer;
+}
