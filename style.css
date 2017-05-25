@@ -1,35 +1,34 @@
-@media (max-width: 768px) {
-  h1 {
-    font-size: 25px; }
-  h2 {
-    font-size: 20px; }
-  h4 {
-    font-size: 15px; } }
-
-body {
-  background-image: url(https://s28.postimg.org/f2ajcib2l/WDF_653975.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 15%; }
-  body .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-  body .container {
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); }
-    body .container #city {
-      margin-bottom: 30px; }
-    body .container h3,
-    body .container h4 {
-      font-weight: bold; }
-    body .container .info {
-      border-top: 1px solid rgba(0, 0, 0, 0.5);
-      padding-top: 15px; }
-      body .container .info .c,
-      body .container .info .f {
-        cursor: pointer; }
+html {
+  height: 100%;
+  min-height: 100%; }
+  html body {
+    height: 100%;
+    min-height: 100%;
+    background-color: #bdbdbd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 15%;
+    vertical-align: middle; }
+    html body h1 {
+      font-size: calc(5vw + 5vh / 2);
+      padding: 30px 0px; }
+    html body .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+    html body .container {
+      padding: 15px; }
+      html body .container h2 {
+        font-size: calc(3vw + 3vh / 2);
+        padding: 5px 0px; }
+      html body .container h3 {
+        font-size: calc(1.5vw + 1.5vh);
+        padding: 15px; }
+      html body .container .info {
+        padding-top: 15px; }
+        html body .container .info .c,
+        html body .container .info .f {
+          cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

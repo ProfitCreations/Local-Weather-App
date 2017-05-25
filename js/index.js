@@ -3,9 +3,9 @@
 * api.openweathermap.org/data/2.5/weather?q={city name}
 */
 $(document).ready(function(){
- 
-  
-  var wCity; 
+
+
+  var wCity;
   var latitude;
   var longitude;
   var country;
@@ -17,22 +17,21 @@ $(document).ready(function(){
   var weatherIcon;
   var tempC;
   var tempF;
-  
-  $.get("http://ipinfo.io/", function(response) {
+
+  $.get("http://ip-api.com/json", function(response) {
     wCity = response.city;
     postal = response.postal;
     country = response.country;
-    latitude = response.loc.split(',')[0];
-    longitude = response.loc.split(',')[1];
-    $("#city").html(wCity).append(" , " + country);
+    latitude = response.lat;
+    longitude = response.lon;
+    $("#city").html(wCity);
+    $("#country").html(country);
     getWeather(latitude, longitude);
-    
     }, "jsonp")
-  
+
   function getWeather(lat, lon){
     weatherApi = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=60aa92c78b7d34035a9a01766511670c";
     $.get(weatherApi, function(data){
-      console.log(data);
       weatherMain = data.weather[0].main;
       weatherTemp = data.main.temp;
       weatherIcon = '<img class="center " src="http://openweathermap.org/img/w/' + data.weather[0].icon + '.png" alt="Weather Icon">';
@@ -41,7 +40,7 @@ $(document).ready(function(){
       $("#weather-main").html(weatherMain);
       $("#weather-temp").html(tempC);
       $("#weather-icon").html(weatherIcon);
-      
+
       $("#weather-temp").on("click", function(){
         if ($("#weather-temp").hasClass("c")) {
           $("#weather-temp").removeClass("c").addClass("f").html(tempF);
@@ -49,28 +48,21 @@ $(document).ready(function(){
           $("#weather-temp").removeClass("f").addClass("c").html(tempC);
         }
       });
-      
-      $("#weather-temp")
-        .mouseover(function(){
-          $("#weather-temp").addClass("animated shake");
-        })
-        .mouseleave(function(){
-          $("#weather-temp").removeClass("animated shake");
-      });
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
     })
-   
+
   }
- 
-  
-  
-                  
-  
-     
+
+
+
+
+
+
   });
